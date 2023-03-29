@@ -31,7 +31,7 @@ export class CoreModule {
       providers: [
         { provide: APP_INITIALIZER, useFactory: authAppInitializerFactory, deps: [AuthService], multi: true },
         { provide: AuthConfig, useValue: authConfig },
-        { provide: OAuthModuleConfig, useValue: authModuleConfig },
+        // { provide: OAuthModuleConfig, useValue: authModuleConfig },
         { provide: OAuthStorage, useFactory: storageFactory },
       ]
     };

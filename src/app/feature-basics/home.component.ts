@@ -7,7 +7,7 @@ import { ApiService } from '../shared/api.service';
   selector: 'app-home',
   template: `<p class="alert alert-primary">
     This is the <strong>🏠 HOME</strong> component.
-    - {{ apiResponse | async }}
+    - {{ apiResponse | async |json }}
   </p>`,
 })
 export class HomeComponent implements OnInit {

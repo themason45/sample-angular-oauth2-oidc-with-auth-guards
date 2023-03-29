@@ -91,7 +91,7 @@ export class AuthService {
     // 0. LOAD CONFIG:
     // First we have to check to see how the IdServer is
     // currently configured:
-    return this.oauthService.loadDiscoveryDocument()
+    return this.oauthService.loadDiscoveryDocument(`${this.oauthService.issuer}.well-known/openid-configuration/`)
 
       // For demo purposes, we pretend the previous call was very slow
       .then(() => new Promise<void>(resolve => setTimeout(() => resolve(), 1500)))
